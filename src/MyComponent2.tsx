@@ -1,10 +1,11 @@
 import React from "react";
+import { User } from "./App";
 
-export class MyComponent2 extends  React.Component { 
+export class MyComponent2 extends React.Component<{}, {user: User}> { 
  
-    constructor(props) {
+    constructor(props: React.Component<{}, {user: User}>) {
         super(props);
-        this.state = { user: {} };
+        this.state = { user: {} as User };
     }
    
     render() { 
